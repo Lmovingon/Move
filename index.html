@@ -35,17 +35,20 @@
 	      	var directions = document.getElementById("directions"),
 	      		forward = document.getElementById("forward")
 	   		if(evt.gamma < 0) {				//gamma -90~90 
-	   			shape.x += gamma/5
+	   			shape.x += gamma/5;
+	   			stage.update();
 	   		} else {
-	   			shape.x += gamma/5
+	   			shape.x += gamma/5;
+	   			stage.update();
 	   		}
 
 	   		if(evt.beta < 0) {       //beta 前后 <0为前    -180 ~ 180
-	   			shape.y += beta/5
+	   			shape.y += beta/5;
+	   			stage.update();
 	   		} else {
-	   			shape.y += beta/5
+	   			shape.y += beta/5;
+	   			stage.update();
 	   		}
-	   		stage.update();
 	   	}
 	</script>
 </body>
