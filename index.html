@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charest="UTF-8">
+	<title>重力感应</title>
+</head>
+<body>
+	<div id="directions"></div>
+	<div id="forward"></div>
+	<script>	
+
+	  	window.addEventListener("deviceorientation", findNorth);
+	   	function findNorth(evt) {
+
+	      	var directions = document.getElementById("directions"),
+	      		forward = document.getElementById("forward")
+	   		if(evt.gamma < 0) {
+	   			directions.innerHTML = "turn left";
+	   		} else {
+	   			directions.innerHTML = "ture right";
+	   		}
+
+	   		if(evt.beta > 0) {
+	   			forward.innerHTML = "gogogo";
+	   		} else {
+	   			forward.innerHTML = "back!!"
+	   		}
+	   	}
+	</script>
+</body>
+</html>
